@@ -35,34 +35,23 @@ public class Main extends javax.swing.JFrame {
         jPopupMenu3 = new javax.swing.JPopupMenu();
         jPopupMenu4 = new javax.swing.JPopupMenu();
         jPopupMenu5 = new javax.swing.JPopupMenu();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         mainBar = new javax.swing.JMenuBar();
         sessionMenu = new javax.swing.JMenu();
         newSession = new javax.swing.JMenuItem();
         openSession = new javax.swing.JMenuItem();
         saveSession = new javax.swing.JMenuItem();
+        participantsMenu = new javax.swing.JMenu();
+        addParticipant = new javax.swing.JMenuItem();
+        editParticipant = new javax.swing.JMenuItem();
+        elementsMenu = new javax.swing.JMenu();
+        addElement = new javax.swing.JMenuItem();
+        editElement = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
         jMenuItem2.setText("jMenuItem2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jButton1.setText("Nuevo perfil");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Print");
-        jButton2.setName("buttonPrint"); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
 
         sessionMenu.setText("Session");
 
@@ -90,49 +79,76 @@ public class Main extends javax.swing.JFrame {
 
         mainBar.add(sessionMenu);
 
+        participantsMenu.setText("Participants");
+
+        addParticipant.setText("Add Participant");
+        addParticipant.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addParticipantActionPerformed(evt);
+            }
+        });
+        participantsMenu.add(addParticipant);
+
+        editParticipant.setText("Edit Participant");
+        participantsMenu.add(editParticipant);
+
+        mainBar.add(participantsMenu);
+
+        elementsMenu.setText("Elements");
+
+        addElement.setText("Add Element");
+        addElement.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addElementActionPerformed(evt);
+            }
+        });
+        elementsMenu.add(addElement);
+
+        editElement.setText("Edit Element");
+        editElement.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editElementActionPerformed(evt);
+            }
+        });
+        elementsMenu.add(editElement);
+
+        mainBar.add(elementsMenu);
+
         setJMenuBar(mainBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(86, 86, 86)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67)
-                .addComponent(jButton2)
-                .addContainerGap(490, Short.MAX_VALUE))
+            .addGap(0, 847, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2))
-                .addContainerGap(317, Short.MAX_VALUE))
+            .addGap(0, 481, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void newSessionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newSessionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_newSessionActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        PrintTxt pruebaPrint = new PrintTxt();
-        pruebaPrint.actionPerformed(evt);
-        System.out.println("llego aqui");
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void openSessionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openSessionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_openSessionActionPerformed
+
+    private void addParticipantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addParticipantActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addParticipantActionPerformed
+
+    private void addElementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addElementActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addElementActionPerformed
+
+    private void editElementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editElementActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editElementActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,8 +186,11 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JMenuItem addElement;
+    private javax.swing.JMenuItem addParticipant;
+    private javax.swing.JMenuItem editElement;
+    private javax.swing.JMenuItem editParticipant;
+    private javax.swing.JMenu elementsMenu;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPopupMenu jPopupMenu1;
@@ -182,7 +201,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuBar mainBar;
     private javax.swing.JMenuItem newSession;
     private javax.swing.JMenuItem openSession;
+    private javax.swing.JMenu participantsMenu;
     private javax.swing.JMenuItem saveSession;
     private javax.swing.JMenu sessionMenu;
     // End of variables declaration//GEN-END:variables
+
 }
