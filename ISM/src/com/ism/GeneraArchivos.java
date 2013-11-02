@@ -35,7 +35,7 @@ import java.util.LinkedList;
 
 /**
  *
- * @author Adrian
+ * @author SocialWare
  */
 public class GeneraArchivos {
     
