@@ -29,53 +29,53 @@ import java.util.*;
  *
  * @author JLo
  */
-public class Sesion {
+public class Session {
     
-    private String sNombreSesion;
+    private String sSessionName;
     private String sTriggering;
-    private boolean bHayTriggering;
-    private LinkedList<Participante> lParticipantes;
-    private boolean bHayParticipantes;
-    private LinkedList<Elemento> lElementos;
-    private boolean bHayElementos;
+    private boolean bHasTriggering;
+    private LinkedList<Participante> lParticipants;
+    private boolean bHasParticipants;
+    private LinkedList<Elemento> lElements;
+    private boolean bHasElements;
     
     /**
      *
-     * @param nombre
+     * @param name
      */
-    public Sesion(String nombre){
-        this.sNombreSesion = nombre;
-        this.bHayTriggering = false;
-        this.bHayParticipantes = false;
-        this.bHayElementos = false;
+    public Session(String name){
+        this.sSessionName = name;
+        this.bHasTriggering = false;
+        this.bHasParticipants = false;
+        this.bHasElements = false;
     }
     
     /**
-     * Metodo modificador utilizado para establecer el nombre de la Sesion
-     * @param nombre es el <code>Nombre</code> del objeto Sesion.
+     * Setting Name method
+     * @param name is the <code>name</code> of the Session Object
      */
-    public void setNombreSesion(String nombre){
-        this.sNombreSesion = nombre;
+    public void setSessionName(String name){
+        this.sSessionName = name;
     }
     
     /**
-     *  Metodo de acceso al nombre del objeto Sesion
-     * @return sNombreSesion Es el <code>nombre</code> del objeto que se obtiene.
+     *  Access method to the session name
+     * @return sSessionName is the <code>sSessionName</code> of the object.
      */
-    public String getNombreSesion(){
-        return this.sNombreSesion;
+    public String getSessionName(){
+        return this.sSessionName;
     }
     
     /**
-     *  Metodo modificador utliizado para establecer una triggering question.
-     * @param triggering Es la <code>triggering</code> del objeto.
+     *  Setting the triggering question
+     * @param triggering Is the <code>triggering</code> of the object.
      */
     public void setTriggering(String triggering){
         this.sTriggering = triggering;
     }
     
     /**
-     * Metodo de acceso a las triggering questions
+     * Access method to the Triggering question 
      * @return sTriggering 
      */
     public String getTriggering(){
@@ -83,19 +83,19 @@ public class Sesion {
     }
     
     /**
-     * Metodo modificador para verificar si ya se realizo el paso de triggering question
-     * @param hayTriggering
+     * Setting the  has triggering boolean 
+     * @param hasTriggering
      */
-    public void setHayTriggering(boolean hayTriggering){
-        this.bHayTriggering = hayTriggering;
+    public void setHasTriggering(boolean hasTriggering){
+        this.bHasTriggering = hasTriggering;
     }
     
     /**
-     * Metodo de acceso para verificar si el paso de HayTriggering ya se realizo
+     * Access method to the has triggering boolean
      * @return bHayTriggering
      */
-    public boolean getHayTriggering(){
-        return this.bHayTriggering;
+    public boolean getHasTriggering(){
+        return this.bHasTriggering;
     }
     
 }
