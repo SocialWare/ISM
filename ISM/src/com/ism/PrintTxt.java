@@ -29,12 +29,14 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.awt.print.*;
 import java.awt.Font;
+import static java.awt.print.Printable.NO_SUCH_PAGE;
+import static java.awt.print.Printable.PAGE_EXISTS;
 
 /**
  *
- * @author Adrian
+ * @author SocialWare
  */
-public class Imprimir implements Printable, ActionListener{
+public class PrintTxt implements Printable, ActionListener{
     public void actionPerformed(ActionEvent e) {
         System.out.println("actionperformred");
         PrinterJob job = PrinterJob.getPrinterJob();

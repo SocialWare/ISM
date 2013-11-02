@@ -37,7 +37,7 @@ import java.util.LinkedList;
  *
  * @author SocialWare
  */
-public class GeneraArchivos {
+public class GenerateFile {
     
     public void generaArchivoIdeas(LinkedList <Elemento> lista) throws IOException{
 
