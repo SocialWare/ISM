@@ -52,6 +52,7 @@ public class GenerateFile {
         }
         
         archivoIdeas.close();
+        //checar para que se ponga en una hoja cada una de las ideas 
 
     }
     
