@@ -26,7 +26,7 @@ package com.ism;
 
 /**
  *
- * @author jeipi
+ * @author Juan Pablo Romero
  */
 public class Elemento {
     
@@ -43,25 +43,68 @@ public class Elemento {
     }
     
     // GETS & SETS
+    
+     /**
+     * Metodo modificador usado para cambiar el ID del elemento
+     * @param iID es el <code>id</code> del objeto.
+     */
     public void setiID(int iID) {
         this.iID = iID;
     }
     
-    /*
-    * @params iIDParticipante
-    */
-    
+     /**
+     * Metodo modificador usado para cambiar el ID del participante que dio el elemento
+     * @param iID es el <code>id</code> del objeto.
+     */
     public void setiIDParticipante(int iIDParticipante) {
         this.iIDParticipante = iIDParticipante;
     }
     
+     /**
+     * Metodo modificador usado para cambiar la idea
+     * @param sIdea es la <code>idea</code> en si
+     */
     public void setsIdea(String sIdea) {
         this.sIdea = sIdea;
     }
-    
+
+     /**
+     * Metodo modificador usado para cambiar la clarificacion de la idea
+     * @param sIdea es la <code>clarificacion de la idea</code>
+     */
     public void setsClarificacion(String sClarificacion) {
         this.sClarificacion = sClarificacion;
     }
     
+     /**
+     * Metodo de acceso que regresa el ID del Elemento  
+     * @return iID es el <code>id</code> del objeto.
+     */
+    public int getiID() {
+        return iID;
+    }
     
+     /**
+     * Metodo de acceso que regresa el ID del participante que propuso el Elemento 
+     * @return iIDParticipante es el <code>id del participante</code> del objeto.
+     */
+    public int getiIDParticipante() {
+        return iIDParticipante;
+    }
+    
+      /**
+     * Metodo de acceso que regresa la idea en si
+     * @return sIdea es la <code>idea</code> del objeto.
+     */
+    public String getsIdea() {
+        return sIdea;
+    }   
+    
+     /**
+     * Metodo de acceso que regresa la clarificacion de la idea
+     * @return sClarificacion es la <code>clarificacion</code> de la idea del objeto.
+     */
+    public String getsClarificacion() {
+        return sIdea;
+    }   
 }
