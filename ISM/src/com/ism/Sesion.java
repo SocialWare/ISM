@@ -33,14 +33,41 @@ public class Sesion {
     
     private String sNombreSesion;
     private String sTriggering;
-    private boolean hayTriggering=false;
+    private boolean bHayTriggering;
     private LinkedList<Participante> lParticipantes;
-    private boolean hayParticipantes=false;
+    private boolean bHayParticipantes;
     private LinkedList<Elemento> lElementos;
-    private boolean hayElementos=false;
+    private boolean bHayElementos;
     
     public Sesion(String nombre){
         this.sNombreSesion = nombre;
-    }    
+        this.bHayTriggering = false;
+        this.bHayParticipantes = false;
+        this.bHayElementos = false;
+    }
+    
+    public void setNombreSesion(String nombre){
+        this.sNombreSesion = nombre;
+    }
+    
+    public String getNombreSesion(){
+        return this.sNombreSesion;
+    }
+    
+    public void setTriggering(String triggering){
+        this.sTriggering = triggering;
+    }
+    
+    public String getTriggering(){
+        return this.sTriggering;
+    }
+    
+    public void setHayTriggering(boolean hayTriggering){
+        this.bHayTriggering = hayTriggering;
+    }
+    
+    public boolean getHayTriggering(){
+        return this.bHayTriggering;
+    }
     
 }
