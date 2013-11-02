@@ -28,6 +28,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.awt.print.*;
+import java.awt.Font;
 
 /**
  *
@@ -62,7 +63,9 @@ public class Imprimir implements Printable, ActionListener{
         g2d.translate(pf.getImageableX(), pf.getImageableY());
 
         // Now we perform our rendering
+        
         g.drawString("Hello world!", 100, 100);
+        
 
         // tell the caller that this page is part
         // of the printed document
