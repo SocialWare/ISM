@@ -125,7 +125,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_newSessionActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Imprimir pruebaPrint = new Imprimir();
+        PrintTxt pruebaPrint = new PrintTxt();
         pruebaPrint.actionPerformed(evt);
         System.out.println("llego aqui");
     }//GEN-LAST:event_jButton2ActionPerformed
