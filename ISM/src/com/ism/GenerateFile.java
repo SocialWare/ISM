@@ -39,15 +39,15 @@ import java.util.LinkedList;
  */
 public class GenerateFile {
     
-    public void generaArchivoIdeas(LinkedList <Elemento> lista) throws IOException{
+    public void generaArchivoIdeas(LinkedList <Element> lista) throws IOException{
 
         PrintWriter archivoIdeas = new PrintWriter(new FileWriter("ideas.txt"));
    
         for(int i = 0; i < lista.size(); i++){
             
-            Elemento elemento = lista.get(i);
+            Element elemento = lista.get(i);
             archivoIdeas.println(elemento.getsIdea() + "\n");
-            archivoIdeas.println(elemento.getsClarificacion() + "\n");
+            archivoIdeas.println(elemento.getsClarification() + "\n");
             
         }
         
