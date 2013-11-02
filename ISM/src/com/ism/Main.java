@@ -37,19 +37,11 @@ public class Main extends javax.swing.JFrame {
         jPopupMenu5 = new javax.swing.JPopupMenu();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
-        jMenu7 = new javax.swing.JMenu();
-        jMenu8 = new javax.swing.JMenu();
-        jMenu9 = new javax.swing.JMenu();
+        mainBar = new javax.swing.JMenuBar();
+        sessionMenu = new javax.swing.JMenu();
+        newSession = new javax.swing.JMenuItem();
+        openSession = new javax.swing.JMenuItem();
+        saveSession = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -72,50 +64,33 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        jMenu1.setText("File");
+        sessionMenu.setText("Session");
 
-        jMenuItem4.setText("New");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        newSession.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
+        newSession.setText("New Session");
+        newSession.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                newSessionActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem4);
+        sessionMenu.add(newSession);
 
-        jMenuItem5.setText("jMenuItem5");
-        jMenu1.add(jMenuItem5);
+        openSession.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
+        openSession.setText("Open Session");
+        openSession.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                openSessionActionPerformed(evt);
+            }
+        });
+        sessionMenu.add(openSession);
 
-        jMenuBar1.add(jMenu1);
+        saveSession.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
+        saveSession.setText("Save Session");
+        sessionMenu.add(saveSession);
 
-        jMenu2.setText("Element");
-        jMenuBar1.add(jMenu2);
+        mainBar.add(sessionMenu);
 
-        jMenu3.setText("Category");
-
-        jMenuItem3.setText("Hola");
-        jMenu3.add(jMenuItem3);
-
-        jMenuBar1.add(jMenu3);
-
-        jMenu4.setText("Voting");
-        jMenuBar1.add(jMenu4);
-
-        jMenu5.setText("Structure");
-        jMenuBar1.add(jMenu5);
-
-        jMenu6.setText("Analysis");
-        jMenuBar1.add(jMenu6);
-
-        jMenu7.setText("Record");
-        jMenuBar1.add(jMenu7);
-
-        jMenu8.setText("Options...");
-        jMenuBar1.add(jMenu8);
-
-        jMenu9.setText("Help");
-        jMenuBar1.add(jMenu9);
-
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(mainBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -145,15 +120,19 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void newSessionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newSessionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_newSessionActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Imprimir pruebaPrint = new Imprimir();
+        PrintTxt pruebaPrint = new PrintTxt();
         pruebaPrint.actionPerformed(evt);
         System.out.println("llego aqui");
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void openSessionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openSessionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_openSessionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,25 +172,17 @@ public class Main extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
-    private javax.swing.JMenu jMenu8;
-    private javax.swing.JMenu jMenu9;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JPopupMenu jPopupMenu2;
     private javax.swing.JPopupMenu jPopupMenu3;
     private javax.swing.JPopupMenu jPopupMenu4;
     private javax.swing.JPopupMenu jPopupMenu5;
+    private javax.swing.JMenuBar mainBar;
+    private javax.swing.JMenuItem newSession;
+    private javax.swing.JMenuItem openSession;
+    private javax.swing.JMenuItem saveSession;
+    private javax.swing.JMenu sessionMenu;
     // End of variables declaration//GEN-END:variables
 }

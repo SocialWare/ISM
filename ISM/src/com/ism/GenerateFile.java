@@ -35,8 +35,24 @@ import java.util.LinkedList;
 
 /**
  *
- * @author Adrian
+ * @author SocialWare
  */
-public class GeneraArchivos {
+public class GenerateFile {
+    
+    public void generaArchivoIdeas(LinkedList <Element> lista) throws IOException{
+
+        PrintWriter archivoIdeas = new PrintWriter(new FileWriter("ideas.txt"));
+   
+        for(int i = 0; i < lista.size(); i++){
+            
+            Element elemento = lista.get(i);
+            archivoIdeas.println(elemento.getsIdea() + "\n");
+            archivoIdeas.println(elemento.getsClarification() + "\n");
+            
+        }
+        
+        archivoIdeas.close();
+
+    }
     
 }
