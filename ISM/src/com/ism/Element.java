@@ -35,7 +35,7 @@ public class Element {
     private String sIdea;
     private String sClarification;
     
-    public Elemento(int iID, int iIDParticipant, String sIdea, String sClarification) {
+    public Element(int iID, int iIDParticipant, String sIdea, String sClarification) {
         this.iID = iID;
         this.iIDParticipant = iIDParticipant;
         this.sIdea = sIdea;
