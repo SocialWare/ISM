@@ -37,6 +37,7 @@ public class Participante {
     private String sEstado;
     private String sCP;
     private String sTelefono;
+    private boolean prueba;
     
     public Participante(int iID, String sNombre ,String sTipo) {
         this.iID = iID;
