@@ -39,6 +39,10 @@ public class Sesion {
     private LinkedList<Elemento> lElementos;
     private boolean bHayElementos;
     
+    /**
+     *
+     * @param nombre
+     */
     public Sesion(String nombre){
         this.sNombreSesion = nombre;
         this.bHayTriggering = false;
@@ -46,26 +50,50 @@ public class Sesion {
         this.bHayElementos = false;
     }
     
+    /**
+     * Metodo modificador utilizado para establecer el nombre de la Sesion
+     * @param nombre es el <code>Nombre</code> del objeto Sesion.
+     */
     public void setNombreSesion(String nombre){
         this.sNombreSesion = nombre;
     }
     
+    /**
+     *  Metodo de acceso al nombre del objeto Sesion
+     * @return sNombreSesion Es el <code>nombre</code> del objeto que se obtiene.
+     */
     public String getNombreSesion(){
         return this.sNombreSesion;
     }
     
+    /**
+     *  Metodo modificador utliizado para establecer una triggering question.
+     * @param triggering Es la <code>triggering</code> del objeto.
+     */
     public void setTriggering(String triggering){
         this.sTriggering = triggering;
     }
     
+    /**
+     * Metodo de acceso a las triggering questions
+     * @return sTriggering 
+     */
     public String getTriggering(){
         return this.sTriggering;
     }
     
+    /**
+     * Metodo modificador para verificar si ya se realizo el paso de triggering question
+     * @param hayTriggering
+     */
     public void setHayTriggering(boolean hayTriggering){
         this.bHayTriggering = hayTriggering;
     }
     
+    /**
+     * Metodo de acceso para verificar si el paso de HayTriggering ya se realizo
+     * @return bHayTriggering
+     */
     public boolean getHayTriggering(){
         return this.bHayTriggering;
     }
