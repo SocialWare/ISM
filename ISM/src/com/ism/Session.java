@@ -34,7 +34,7 @@ public class Session {
     private String sSessionName;
     private String sTriggering;
     private boolean bHasTriggering;
-    private LinkedList<Participante> lParticipants;
+    private LinkedList<Participant> lParticipants;
     private boolean bHasParticipants;
     private LinkedList<Element> lElements;
     private boolean bHasElements;
