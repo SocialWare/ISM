@@ -7,7 +7,7 @@ package com.ism;
 
 /**
  *
- * @author JLo
+ * @author SocialWare
  */
 public class Main extends javax.swing.JFrame {
 
