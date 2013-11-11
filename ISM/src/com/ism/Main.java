@@ -35,6 +35,12 @@ public class Main extends javax.swing.JFrame {
         jPopupMenu3 = new javax.swing.JPopupMenu();
         jPopupMenu4 = new javax.swing.JPopupMenu();
         jPopupMenu5 = new javax.swing.JPopupMenu();
+        triggering = new java.awt.Button();
+        triggeringQuestionFrame = new javax.swing.JInternalFrame();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList();
         mainBar = new javax.swing.JMenuBar();
         sessionMenu = new javax.swing.JMenu();
         newSession = new javax.swing.JMenuItem();
@@ -52,6 +58,43 @@ public class Main extends javax.swing.JFrame {
         jMenuItem2.setText("jMenuItem2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        triggering.setActionCommand("setTriggering");
+        triggering.setLabel("Set Triggering Question");
+        triggering.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                triggeringActionPerformed(evt);
+            }
+        });
+
+        triggeringQuestionFrame.setClosable(true);
+        triggeringQuestionFrame.setTitle("Set Triggering Question");
+        triggeringQuestionFrame.setVisible(false);
+
+        javax.swing.GroupLayout triggeringQuestionFrameLayout = new javax.swing.GroupLayout(triggeringQuestionFrame.getContentPane());
+        triggeringQuestionFrame.getContentPane().setLayout(triggeringQuestionFrameLayout);
+        triggeringQuestionFrameLayout.setHorizontalGroup(
+            triggeringQuestionFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        triggeringQuestionFrameLayout.setVerticalGroup(
+            triggeringQuestionFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jList1.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jList1);
+
+        jList2.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jList2);
 
         sessionMenu.setText("Session");
 
@@ -120,11 +163,30 @@ public class Main extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 847, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jScrollPane1)
+                    .addComponent(triggering, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(triggeringQuestionFrame, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(202, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 481, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(triggering, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(triggeringQuestionFrame, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(75, Short.MAX_VALUE))
         );
 
         pack();
@@ -149,6 +211,10 @@ public class Main extends javax.swing.JFrame {
     private void editElementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editElementActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_editElementActionPerformed
+
+    private void triggeringActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_triggeringActionPerformed
+       trigerringQuestionFrame.setVisible(true);
+    }//GEN-LAST:event_triggeringActionPerformed
 
     /**
      * @param args the command line arguments
@@ -191,6 +257,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem editElement;
     private javax.swing.JMenuItem editParticipant;
     private javax.swing.JMenu elementsMenu;
+    private javax.swing.JList jList1;
+    private javax.swing.JList jList2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPopupMenu jPopupMenu1;
@@ -198,12 +266,16 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPopupMenu jPopupMenu3;
     private javax.swing.JPopupMenu jPopupMenu4;
     private javax.swing.JPopupMenu jPopupMenu5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JMenuBar mainBar;
     private javax.swing.JMenuItem newSession;
     private javax.swing.JMenuItem openSession;
     private javax.swing.JMenu participantsMenu;
     private javax.swing.JMenuItem saveSession;
     private javax.swing.JMenu sessionMenu;
+    private java.awt.Button triggering;
+    private javax.swing.JInternalFrame triggeringQuestionFrame;
     // End of variables declaration//GEN-END:variables
 
 }
